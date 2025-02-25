@@ -25,12 +25,11 @@ Este programa comprende varios pequeños programas de lógica de programación.
 
 ## 📜 Endpoints de la API  
 
-| ⚡ **Método** | 🌍 **Endpoint**   | 📄 **Descripción**            |
-|-------------|----------------|------------------------------|
-| `GET`      | `/api/users`    | Obtener todos los usuarios  |
-| `POST`     | `/api/users`    | Crear un nuevo usuario      |
+| Método  | Endpoint      | Descripción               |
+|---------|-------------|---------------------------|
+| GET     | `/api/users` | Obtener todos los usuarios |
+| POST    | `/api/users` | Crear un nuevo usuario    |
 
-| `POST`     | `/api/users`    | Crear un nuevo usuario      |
 
 
 
