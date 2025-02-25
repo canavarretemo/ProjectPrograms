@@ -23,13 +23,13 @@ Este programa comprende varios pequeños programas de lógica de programación.
  ┣ 📄 README.md
  ┗ 📄 pom.xml
 
-✔️ API REST con Spring Boot
-
 ## 📜 Endpoints de la API  
 
-| ⚡ **Método** | 🌍 **Endpoint**  | 📄 **Descripción**            |
+| ⚡ **Método** | 🌍 **Endpoint**   | 📄 **Descripción**            |
 |-------------|----------------|------------------------------|
 | `GET`      | `/api/users`    | Obtener todos los usuarios  |
+| `POST`     | `/api/users`    | Crear un nuevo usuario      |
+
 | `POST`     | `/api/users`    | Crear un nuevo usuario      |
 
 
