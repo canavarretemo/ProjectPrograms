@@ -31,8 +31,14 @@ Este programa comprende varios pequeños programas de lógica de programación.
  ┣ 📄 README.md
  ┗ 📄 pom.xml
 
+✅ Características
+✔️ API REST con Spring Boot
+✔️ Seguridad con JWT
+✔️ Manejo de base de datos con Hibernate y JPA
+✔️ Dockerización para despliegue rápido
 
-
-
-
+📜 Endpoints de la API
+Método	Endpoint	Descripción
+GET	/api/users	Obtener todos los usuarios
+POST	/api/users	Crear un nuevo usuario
 
