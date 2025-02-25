@@ -1,5 +1,13 @@
 # 🖥️ ProjectPrograms
 
+## 📜 Endpoints de la API  
+
+| Método  | Endpoint      | Descripción               |
+|---------|-------------|---------------------------|
+| GET     | `/api/users` | Obtener todos los usuarios |
+| POST    | `/api/users` | Crear un nuevo usuario    |
+
+
 **Descripción breve:**  
 Este programa comprende varios pequeños programas de lógica de programación. 
 
@@ -23,12 +31,6 @@ Este programa comprende varios pequeños programas de lógica de programación.
  ┣ 📄 README.md
  ┗ 📄 pom.xml
 
-## 📜 Endpoints de la API  
-
-| Método  | Endpoint      | Descripción               |
-|---------|-------------|---------------------------|
-| GET     | `/api/users` | Obtener todos los usuarios |
-| POST    | `/api/users` | Crear un nuevo usuario    |
 
 
 
