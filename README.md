@@ -1,3 +1,13 @@
+# 🖥️ ProjectPrograms
+
+**Descripción breve:**  
+Este programa comprende varios pequeños programas de lógica de programación. 
+
+## 🚀 Tecnologías utilizadas  
+- 🟢 Java SE/EE, Spring Boot  
+- ⚙️ Maven
+- 📜 Swagger/OpenAPI
+
 ## 📂 Estructura del Proyecto
 ```bash
 ├──  📂 src
@@ -30,3 +40,16 @@
 ├──  📄 README.md
 └──  📄 pom.xml
 ```
+
+## ✅ Características
+✔️ API REST con Spring Boot  
+✔️ Documentación de API con Swagger
+
+## 📜 Endpoints de la API  
+
+| Método  | Endpoint      | Descripción               |
+|---------|-------------|---------------------------|
+| GET     | `/api/users` | Obtener todos los usuarios |
+| POST    | `/api/users` | Crear un nuevo usuario    |
+
+
