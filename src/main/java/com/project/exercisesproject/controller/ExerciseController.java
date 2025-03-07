@@ -26,7 +26,7 @@ public class ExerciseController {
         this.userService = userService;
     }
 
-    // TODO: corregir cuando el usuario envía nula la palabra
+    // TODO: corregir cuando el usuario envía nula la palabra del endpoint
     // TODO: Do test
     @GetMapping("/palindrome/{word}")
     public ResponseEntity<ApiResponse<String>> getPalindromeWord(@PathVariable @NonNull String word) {
