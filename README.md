@@ -37,19 +37,19 @@ Este programa comprende varios pequeños programas de lógica de programación.
 │                       └──  📄 ExercisesProjectApplicationTests.java
 ├──  📄 .gitattributes
 ├──  📄 .gitignore
-├──  📄 README.md
-└──  📄 pom.xml
+├──  📄 pom.xml
+└──  📄 update_readme.py
 ```
 
 ## ✅ Características
 ✔️ API REST con Spring Boot  
 ✔️ Documentación de API con Swagger
 
-## 📜 Endpoints de la API  
-
-| Método  | Endpoint      | Descripción               |
-|---------|-------------|---------------------------|
-| GET     | `/api/users` | Obtener todos los usuarios |
-| POST    | `/api/users` | Crear un nuevo usuario    |
-
-
+## 📌 Endpoints de la API
+<!-- START ENDPOINTS -->
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `POST` | `/api/exercises/printNumbers` | Hello word program |
+| `GET` | `/api/exercises/palindrome/{word}` | Check Palindrome word |
+| `GET` | `/api/exercises/helloWorld` | Hello word program |
+<!-- END ENDPOINTS -->

@@ -1,5 +1,6 @@
 package com.project.exercisesproject.service;
 
+import com.project.exercisesproject.dto.numbersDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.stream.Collectors;
@@ -18,11 +19,24 @@ public class ExerciseService {
                     .map(string -> new StringBuilder(string).reverse())
                     .collect(Collectors.joining());
             if (word.equalsIgnoreCase(reverse)) {
-                return "Yes";
+                return "Is palindrome";
             }
 
         }
-        return "No";
+        return "Does not palindrome";
+    }
+
+    public String helloWorldJava() {
+
+       return "Hello, World";
+
+    }
+
+    public String printNumbers(numbersDTO numbers) {
+
+
+
+        return "Your numbers are: " + numbers.getNumberOne() + ", " + numbers.getNumberTwo() + ", " + numbers.getNumberThree();
     }
 //
 //    // Guardar usuario
