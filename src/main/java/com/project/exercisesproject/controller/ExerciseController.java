@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.project.exercisesproject.service.ExerciseService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/exercises")
 @Validated
@@ -36,7 +38,7 @@ public class ExerciseController {
 
         return ResponseEntity.ok(ResponseUtil.success("Process success", response, "Word: " + word));
     }
-    // TODO: Valid jump line
+
     @Operation(summary = "Hello word program", description = "Return word Hello, World and Hello, Java.")
     @GetMapping("/helloWorld")
     public ResponseEntity<ApiResponse<String>> helloWorld() {
@@ -44,13 +46,29 @@ public class ExerciseController {
 
         return ResponseEntity.ok(ResponseUtil.success("Process success", response, null));
     }
-    // TODO: Valid null numbers, etc. Change description
-    @Operation(summary = "Hello word program", description = "Return word Hello, World and Hello, Java.")
+    // TODO: Valid null numbers, etc.
+    @Operation(summary = "Print numbers", description = "Print numbers that user sent")
     @PostMapping("/printNumbers")
     public ResponseEntity<ApiResponse<String>> printNumbers(@RequestBody numbersDTO numbers) {
         String response = exerciseService.printNumbers(numbers);
 
         return ResponseEntity.ok(ResponseUtil.success("Process success", response, null));
+    }
+
+    @Operation(summary = "Print multiples", description = "Print first 10 multiples of given number")
+    @GetMapping("/multiples/{number}")
+    public ResponseEntity<ApiResponse<String>> multiples(@PathVariable @NonNull int number) {
+        List<String> response = exerciseService.multiples(number);
+
+        return ResponseEntity.ok(ResponseUtil.success("Process success", response.toString(), "number: " + number));
+    }
+
+    @Operation(summary = "Where number fit", description = "Print where a given number fit, data type.")
+    @GetMapping("/fitnumber/{number}")
+    public ResponseEntity<ApiResponse<String>> fitNumber(@PathVariable @NonNull long number) {
+        String response = exerciseService.fitNumber(number);
+
+        return ResponseEntity.ok(ResponseUtil.success("Process success", response, "number: " + number));
     }
 
 }

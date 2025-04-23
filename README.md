@@ -8,6 +8,11 @@ Este programa comprende varios pequeños programas de lógica de programación.
 - ⚙️ Maven
 - 📜 Swagger/OpenAPI
 
+## ✅ Características
+✔️ API REST con Spring Boot  
+✔️ Documentación de API con Swagger
+
+
 ## 📂 Estructura del Proyecto
 ```bash
 ├──  📂 src
@@ -18,6 +23,8 @@ Este programa comprende varios pequeños programas de lógica de programación.
 │   │   │           └──  📂 exercisesproject
 │   │   │               ├──  📂 controller
 │   │   │               │   └──  📄 ExerciseController.java
+│   │   │               ├──  📂 dto
+│   │   │               │   └──  📄 numbersDTO.java
 │   │   │               ├──  📂 response
 │   │   │               │   └──  📄 ApiResponse.java
 │   │   │               ├──  📂 service
@@ -37,19 +44,17 @@ Este programa comprende varios pequeños programas de lógica de programación.
 │                       └──  📄 ExercisesProjectApplicationTests.java
 ├──  📄 .gitattributes
 ├──  📄 .gitignore
-├──  📄 pom.xml
-└──  📄 update_readme.py
+├──  📄 README.md
+└──  📄 pom.xml
 ```
-
-## ✅ Características
-✔️ API REST con Spring Boot  
-✔️ Documentación de API con Swagger
 
 ## 📌 Endpoints de la API
 <!-- START ENDPOINTS -->
 | Método | Endpoint | Descripción |
 |--------|----------|-------------|
-| `POST` | `/api/exercises/printNumbers` | Hello word program |
-| `GET` | `/api/exercises/palindrome/{word}` | Check Palindrome word |
-| `GET` | `/api/exercises/helloWorld` | Hello word program |
+| `POST` | `/api/exercises/printNumbers` | Print numbers|
+| `GET` | `/api/exercises/palindrome/{word}` | Check Palindrome word|
+| `GET` | `/api/exercises/multiples/{number}` | Print multiples|
+| `GET` | `/api/exercises/helloWorld` | Hello word program|
+| `GET` | `/api/exercises/fitnumber/{number}` | Where number fit|
 <!-- END ENDPOINTS -->

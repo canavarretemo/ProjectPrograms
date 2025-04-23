@@ -3,6 +3,8 @@ package com.project.exercisesproject.service;
 import com.project.exercisesproject.dto.numbersDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -12,9 +14,9 @@ public class ExerciseService {
 
     public String isPalindrome(String word) {
 
-        if(word.length() > 50 ||  word == null){
-            return "El valor no puede ser mayor a 50 o ser nulo";
-        }else{
+        if (word.length() > 50) {
+            return "El valor no puede ser mayor a 50.";
+        } else {
             String reverse = Stream.of(word)
                     .map(string -> new StringBuilder(string).reverse())
                     .collect(Collectors.joining());
@@ -28,15 +30,70 @@ public class ExerciseService {
 
     public String helloWorldJava() {
 
-       return "Hello, World";
+        return "Hello, World";
 
     }
 
     public String printNumbers(numbersDTO numbers) {
 
+        /*
+         public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
 
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+
+    Scanner scan = new Scanner(System.in);
+
+        int i = scan.nextInt();
+        double d  = scan.nextDouble();
+        scan.nextLine();
+        String s = scan.nextLine();
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+         */
 
         return "Your numbers are: " + numbers.getNumberOne() + ", " + numbers.getNumberTwo() + ", " + numbers.getNumberThree();
+    }
+
+    public List<String> multiples(int number) {
+
+        List<String> tabla = new ArrayList<>();
+
+
+        for (int i = 1; i <= 10; i++) {
+            tabla.add(number + " x " + i + " = " + (number * i));
+        }
+        return tabla;
+    }
+
+    public String fitNumber(long number) {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(number)
+                .append(" can be fitted in: ");
+
+        if (number >= -128 && number <= 127) {
+            sb.append(" byte ");
+        }
+        if (number >= -32768 && number <= 32767) {
+            sb.append(" short");
+        }
+
+        if (number >= -2147483648 && number <= 2147483647) {
+            sb.append(" int");
+        }
+
+        sb.append(" long");
+        return sb.toString();
     }
 //
 //    // Guardar usuario
@@ -54,5 +111,5 @@ public class ExerciseService {
 //        return userRepository.findAll(pageable);
 //    }
 
-    }
+}
 
