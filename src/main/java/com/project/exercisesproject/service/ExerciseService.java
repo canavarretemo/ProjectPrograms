@@ -1,16 +1,22 @@
 package com.project.exercisesproject.service;
 
 import com.project.exercisesproject.dto.numbersDTO;
+import com.project.exercisesproject.model.HelloWorld;
+import com.project.exercisesproject.repository.ExerciseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
 public class ExerciseService {
 
+    @Autowired
+    private ExerciseRepository exerciseRepository;
 
     public String isPalindrome(String word) {
 
@@ -30,8 +36,13 @@ public class ExerciseService {
 
     public String helloWorldJava() {
 
-        return "Hello, World";
+        Optional<HelloWorld> hello = exerciseRepository.findById(1L);
 
+        if (hello.isPresent()) {
+            return  hello.get().getMessage();
+        } else {
+            return  "No information";
+        }
     }
 
     public String printNumbers(numbersDTO numbers) {
